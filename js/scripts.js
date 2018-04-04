@@ -24,6 +24,7 @@ if (diceRoll === 1) {
 
 
 
+
 // function roll {
 //   var diceRoll = roll
 // }
@@ -59,16 +60,17 @@ $(document).ready(function() {
 
       playerTwoArr.forEach(function(score){
         currentScore += score;
+        // if (diceRoll === 2) {
+
+
+          if (currentScore >=100) {
+          playerTwoArr = [];
+          alert("YOU WIN!!!");
+        }
+
+
 
         $("#score2").text(currentScore);
-
-
-
-        if (diceRoll === 1) {
-          endTurn()
-
-          // player1.hide() idea
-        }
       });
 console.log(playerTwoArr)
 console.log(currentScore)
