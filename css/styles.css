@@ -18,3 +18,12 @@ body{
 button{
   background-color: orange;
 }
+#player1 {
+  max-width: 50%;
+}
+#player2 {
+  max-width: 50%;
+}
+#gifimg {
+float: right;
+}

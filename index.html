@@ -11,6 +11,9 @@
     <div class="jumbotron jumbotron-flex jumboOne">
       <h1>PIG DICE GAME</h1>
     </div>
+    <div id="gifimg">
+      <img src="img/dice-roll.gif" alt="gif">
+    </div>
     <br>
     <br>
     <br>
@@ -18,21 +21,25 @@
     <br>
 
     <div class="jumbotron jumboTwo">
-      <div class="row">
-        <div class="col-md-6">
-      <button type= "btn" id="roll"><img src="img/dice-roll.gif" alt="gif"></button>
-      <button id="hold" type="btn"></button>
-    </div>
-  </div>
+      <div id="buttons" class="row">
+        <div id="player1" class="col-md-6">
+          <button type="button" id="roll1" class="btn btn-info">Roll</button>
+          <button id="hold1" type="button" class="btn btn-info">Hold</button>
+        </div>
+        <div id="player2" class="col-md-6">
+          <button type="button" id="roll2" class="btn btn-info">Roll</button>
+          <button id="hold2" type="button" class="btn btn-info">Hold</button>
+        </div>
+      </div>
     </div>
 
     <div class="jumbotron jumboTwo">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" id="activePlayer2">
           <p>Player One:</p>
           <span id="score1"></span>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" id="activePlayer2">
           <p>Player Two:</p>
           <span id="score2"></span>
         </div>

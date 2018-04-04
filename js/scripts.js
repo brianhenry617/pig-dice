@@ -2,7 +2,8 @@
 var player1 = 0;
 var player2 = 0;
 var turnScore = 0;
-newArr =[];
+var playerOneArr =[];
+var playerTwoArr =[];
 
 var diceRoll;
 
@@ -29,44 +30,48 @@ if (diceRoll === 1) {
 
 //Front End
 $(document).ready(function() {
-  $("button#roll").click(function(event) {
+  $("button#roll1").click(function(event) {
     var diceRoll = getRandomInt(1,6)
-    // if (diceRoll === 1) {
-    //   xxx + 0
-    // } else {
-    //
-    // }
-
     var currentScore = 0;
     var initial = 0 + diceRoll;
-    newArr.push(initial)
+    playerOneArr.push(initial)
 
-    newArr.forEach(function(score){
+    playerOneArr.forEach(function(score){
       currentScore += score;
+
+      $("#score1").text(currentScore);
+
+      if (diceRoll === 1) {
+        playerOneArr.pop()
+        // player1.hide() idea
+      }
+    });
+    console.log(playerOneArr)
     });
 
-    console.log(currentScore)
+
+
+    $("button#roll2").click(function(event) {
+      var diceRoll = getRandomInt(1,6)
+      var currentScore = 0;
+      var initial = 0 + diceRoll;
+      playerTwoArr.push(initial)
+
+      playerTwoArr.forEach(function(score){
+        currentScore += score;
+
+        $("#score2").text(currentScore);
 
 
 
+        if (diceRoll === 1) {
+          endTurn()
 
-
-
-    // var currentScore = 0 + diceRoll;
-    //   if (diceRoll === 1) {
-    //     turnScore = 0;
-    // } else if (diceRoll >1){
-    //   turnScore += currentScore
-    // }
-    //
-    //
-    // console.log(currentScore)
-
-
-
-  // $("button#hold").click(function(event) {
-  //   event.preventDefault();
-  // })
+          // player1.hide() idea
+        }
+      });
+console.log(playerTwoArr)
+console.log(currentScore)
 
   });
 });
