@@ -4,7 +4,6 @@ var player2 = 0;
 var turnScore = 0;
 var playerOneArr =[];
 var playerTwoArr =[];
-
 var diceRoll;
 
 function getRandomInt(min, max) { //Returns random number between 1 and 6
@@ -13,21 +12,6 @@ function getRandomInt(min, max) { //Returns random number between 1 and 6
   return Math.floor(Math.random() * (max - min + 1)) +min;
 }
 
-function getScore() {
-  turnScore += player1;
-  return player1;
-}
-
-
-if (diceRoll === 1) {
-}
-
-
-
-
-// function roll {
-//   var diceRoll = roll
-// }
 
 //Front End
 $(document).ready(function() {
@@ -53,11 +37,8 @@ $(document).ready(function() {
         playerOneArr = [];
         alert("YOU WIN!!!");
       }
-
-
-
-
       $("#score1").text(currentScore1);
+
     });
     console.log(currentScore1)
     console.log(playerOneArr)
@@ -95,6 +76,7 @@ $(document).ready(function() {
           playerTwoArr = [];
           alert("YOU WIN!!!");
         }
+
         $("#score2").text(currentScore2);
       });
 
