@@ -9,25 +9,24 @@
   </head>
   <body>
     <div class="jumbotron jumbotron-flex jumboOne">
-      <h1>PIG DICE GAME</h1>
-    </div>
-    <div id="gifimg">
-      <img src="img/dice-roll.gif" alt="gif">
+      <h1 class="display-2"><em>PIG DICE GAME</em></h1>
     </div>
     <br>
     <br>
     <br>
     <br>
     <br>
-
+    <!-- buttons -->
     <div class="jumbotron jumboTwo">
-      <div id="buttons" class="row">
+      <div id="buttonRow" class="row">
         <div id="player1" class="col-md-6">
           <h3> Player 1 </h3>
           <button type="button" id="roll1" class="btn btn-info">Roll</button>
           <button id="hold1" type="button" class="btn btn-info">Hold</button>
         </div>
+
         <br>
+
         <div id="player2" class="col-md-6">
           <h3> Player 2 </h3>
           <button type="button" id="roll2" class="btn btn-info">Roll</button>
@@ -35,20 +34,23 @@
         </div>
       </div>
     </div>
-
+    <!-- scores -->
     <div class="jumbotron jumboTwo">
-      <div class="row">
-        <div class="col-md-6" id="activePlayer2">
-          <p>Player One:</p>
+      <div class="row" id="scoreRow">
+        <div class="col-md-6" id="activePlayer1">
+          <h5>Player One:</h5>
           <span id="score1"></span>
         </div>
         <div class="col-md-6" id="activePlayer2">
-          <p>Player Two:</p>
+          <h5>Player Two:</h5>
           <span id="score2"></span>
         </div>
       </div>
     </div>
-
+    <!-- gif -->
+    <div id="gif">
+      <img src="img/dice-roll.gif" alt="gif">
+    </div>
 
   </body>
 </html>

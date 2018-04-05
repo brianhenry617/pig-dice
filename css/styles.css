@@ -9,23 +9,35 @@
 h1{
   text-align: center;
   color: orange;
-}
+  }
 
 body{
   background-color: teal;
 }
-
+p {
+  font-size: 14pt;
+  font-weight: 300;
+  font-style: italic;
+}
 button{
   background-color: orange;
 }
-#player1 {
-  max-width: 50%;
+#buttonRow {
+  max-width: 100%;
+  text-align: center;
 }
-#player2 {
-  max-width: 50%;
+#scoreRow {
+  max-width: 100%;
+  text-align: center;
 }
-#gifimg {
-float: right;
+#gif {
+  max-width: 200px;
+  margin-left: 22.5%;
+}
+.btn {
+  background-color: #008080;
+  border: none;
+  margin: 2.5px;
 }
 
 #roll2{
