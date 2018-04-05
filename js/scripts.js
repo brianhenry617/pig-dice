@@ -33,54 +33,58 @@ if (diceRoll === 1) {
 $(document).ready(function() {
   $("button#roll1").click(function(event) {
     var diceRoll = getRandomInt(1,6)
-    var currentScore = 0;
+    var currentScore1 = 0;
     var initial = 0 + diceRoll;
     playerOneArr.push(initial)
 
     playerOneArr.forEach(function(score){
-      currentScore += score;
+      currentScore1 += score;
+        playerOneArr.forEach(function(score, i) {
+          if (score == 1) {
+            playerOneArr[i] = 0
+          }
+        });
 
-
-
-      $("#score1").text(currentScore);
-
-      if (currentScore >=100) {
+        if (currentScore1 >=100) {
         playerOneArr = [];
         alert("YOU WIN!!!");
-
-        // player1.hide() idea
       }
+
+
+
+      $("#score1").text(currentScore1);
     });
+    console.log(currentScore1)
     console.log(playerOneArr)
-    });
+
+  });
 
 
 
     $("button#roll2").click(function(event) {
       var diceRoll = getRandomInt(1,6)
-      var currentScore = 0;
+      var currentScore2 = 0;
       var initial = 0 + diceRoll;
       playerTwoArr.push(initial)
 
-      playerTwoArr.forEach(function(score){
-        currentScore += score;
-          playerTwoArr.forEach(function(score, i) {
-            if (score == 1) {
+      playerTwoArr.forEach(function(score2){
+        currentScore2 += score2;
+          playerTwoArr.forEach(function(score2, i) {
+            if (score2 == 1) {
               playerTwoArr[i] = 0
             }
           });
 
-          if (currentScore >=100) {
+          if (currentScore2 >=100) {
           playerTwoArr = [];
           alert("YOU WIN!!!");
         }
 
 
 
-        $("#score2").text(currentScore);
+        $("#score2").text(currentScore2);
       });
-console.log(playerTwoArr)
-console.log(currentScore)
+
 
   });
 });
