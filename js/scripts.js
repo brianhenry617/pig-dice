@@ -42,6 +42,10 @@ $(document).ready(function() {
         playerOneArr.forEach(function(score, i) {
           if (score == 1) {
             playerOneArr[i] = 0
+            $("#roll2").toggle();
+            $("#hold2").toggle();
+            $("#roll1").toggle();
+            $("#hold1").toggle();
           }
         });
 
@@ -52,11 +56,19 @@ $(document).ready(function() {
 
 
 
+
       $("#score1").text(currentScore1);
     });
     console.log(currentScore1)
     console.log(playerOneArr)
 
+  });
+
+  $("button#hold1").click(function(event) {
+    $("#roll2").toggle();
+    $("#hold2").toggle();
+    $("#roll1").toggle();
+    $("#hold1").toggle();
   });
 
 
@@ -72,6 +84,10 @@ $(document).ready(function() {
           playerTwoArr.forEach(function(score2, i) {
             if (score2 == 1) {
               playerTwoArr[i] = 0
+              $("#roll2").toggle();
+              $("#hold2").toggle();
+              $("#roll1").toggle();
+              $("#hold1").toggle();
             }
           });
 
@@ -79,12 +95,14 @@ $(document).ready(function() {
           playerTwoArr = [];
           alert("YOU WIN!!!");
         }
-
-
-
         $("#score2").text(currentScore2);
       });
 
-
   });
+    $("button#hold2").click(function(event) {
+      $("#roll2").toggle();
+      $("#hold2").toggle();
+      $("#roll1").toggle();
+      $("#hold1").toggle();
+    });
 });

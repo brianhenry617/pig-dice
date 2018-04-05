@@ -27,3 +27,11 @@ button{
 #gifimg {
 float: right;
 }
+
+#roll2{
+  display: none;
+}
+
+#hold2{
+  display: none;
+}
