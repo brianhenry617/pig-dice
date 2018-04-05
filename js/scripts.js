@@ -40,10 +40,14 @@ $(document).ready(function() {
     playerOneArr.forEach(function(score){
       currentScore += score;
 
+
+
       $("#score1").text(currentScore);
 
-      if (diceRoll === 1) {
-        playerOneArr.pop()
+      if (currentScore >=100) {
+        playerOneArr = [];
+        alert("YOU WIN!!!");
+
         // player1.hide() idea
       }
     });
@@ -60,8 +64,11 @@ $(document).ready(function() {
 
       playerTwoArr.forEach(function(score){
         currentScore += score;
-        // if (diceRoll === 2) {
-
+          playerTwoArr.forEach(function(score, i) {
+            if (score == 1) {
+              playerTwoArr[i] = 0
+            }
+          });
 
           if (currentScore >=100) {
           playerTwoArr = [];
